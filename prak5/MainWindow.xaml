@@ -1,0 +1,34 @@
+﻿<Window x:Class="prak5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prak5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <MenuItem Header="Выход" Click="MenuItem_Click"/>
+            <MenuItem Header="О программе" MenuItem.Click="Oprog_Click"/>
+        </Menu>
+        <Label Content="Первая пара чисел" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20,20,150"/>
+        <TextBox x:Name="FirstParaOne" Grid.Row="0" Grid.Column="0" Width="200" Height="30" Margin="10,20,20,90"/>
+        <TextBox x:Name="FirstParaTwo" Grid.Row="0" Grid.Column="0" Width="200" Height="30" Margin="10,20,20,0"/>
+
+        <Label Content="Вторая пара чисел" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20,20,150"/>
+        <TextBox x:Name="FoundParaOne" Grid.Row="0" Grid.Column="1" Width="200" Height="30" Margin="10,20,20,90"/>
+        <TextBox x:Name="FoundParaTwo" Grid.Row="0" Grid.Column="1" Width="200" Height="30" Margin="10,20,20,0"/>
+
+        <Label Content="Вывод" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="Vyvod" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="200" Height="30" Margin="10,70,20,0"/>
+        <Button Content="Расчитать" Height="30" Width="100" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Click="Button_Click" Margin="10,200,10,0"/>
+    </Grid>
+</Window>
